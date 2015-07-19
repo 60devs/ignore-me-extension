@@ -22,12 +22,12 @@
     },
 
     "content_scripts": [{
+        "run_at": "document_start",
         "matches": [
             "https://*/*",
             "http://*/*"
         ],
-        "js": ["data/app.js"],
-        "all_frames": true
+        "js": ["data/app.js"]
     }],
 
     "background": {
