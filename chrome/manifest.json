@@ -1,0 +1,36 @@
+{
+    "manifest_version": 2,
+    "name": "Ignore Me",
+    "description": "",
+    "version": "1.0",
+
+    "page_action": {
+        "default_title": "Ignore Me",
+        "default_icon": {
+            "38": "data/icon_38.png"
+        }
+    },
+
+    "permissions": [
+        "tabs",
+        "activeTab"
+    ],
+
+    "icons": {
+        "64": "data/icon_64.png",
+        "128": "data/icon_128.png"
+    },
+
+    "content_scripts": [{
+        "matches": [
+            "https://*/*",
+            "http://*/*"
+        ],
+        "js": ["data/app.js"],
+        "all_frames": true
+    }],
+
+    "background": {
+        "scripts": ["index.js"]
+    }
+}
